@@ -24,7 +24,7 @@ export default function Countries() {
         return null;
     }
 
-    const countries = data.countries.slice(0, 14);
+    const countries = data.countries.slice(0, 6);
 
     return (
         <div className={styles.grid}>

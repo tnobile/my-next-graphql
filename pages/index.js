@@ -39,7 +39,7 @@ export default function Home({ countries }) {
           </h1>
   
           <p className={styles.description}>
-            Get started by editing{" "}
+            statically rendered with {" "}
             <code className={styles.code}>pages/index.js</code>
           </p>
   

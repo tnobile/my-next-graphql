@@ -38,7 +38,7 @@ export default function Home({ countries }) {
           </h1>
   
           <p className={styles.description}>
-            Get started by editing{" "}
+            server side rendering with {" "}
             <code className={styles.code}>pages/server-side.js</code>
           </p>
   
