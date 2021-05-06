@@ -3,7 +3,7 @@ import styles from "../styles/Home.module.css";
 
 const QUERY = gql`
   query Countries {
-    countries {
+    countries(filter: {code: { regex:  "^J" }}) {
       capital
       code
       name
