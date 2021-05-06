@@ -4,8 +4,7 @@ import styles from '../styles/Home.module.css'
 import { gql } from "@apollo/client";
 import client from "../apollo-client";
 
-// https://www.apollographql.com/blog/getting-started-with-apollo-client-in-next-js/
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const { data } = await client.query({
     query: gql`
       query Countries {
@@ -20,7 +19,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      countries: data.countries.slice(0, 12),
+      countries: data.countries.slice(0, 6),
     },
   };
 }
@@ -40,7 +39,7 @@ export default function Home({ countries }) {
   
           <p className={styles.description}>
             Get started by editing{" "}
-            <code className={styles.code}>pages/index.js</code>
+            <code className={styles.code}>pages/server-side.js</code>
           </p>
   
           <div className={styles.grid}>
